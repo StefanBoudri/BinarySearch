@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-static void BinarySearch(int array[], int arraySize, int n)
+static int BinarySearch(int array[], int arraySize, int n)
 {
     int low = 0;
     int high = arraySize - 1;
@@ -15,6 +15,7 @@ static void BinarySearch(int array[], int arraySize, int n)
         if (x == n)
         {
             printf("Found %d at index %d\n", x, mid);
+            return 1;
             break;
         }
         else if (x > n)
@@ -26,6 +27,7 @@ static void BinarySearch(int array[], int arraySize, int n)
             low = mid + 1;
         }
     }
+    return 0;
 }
 
 void main()
@@ -44,5 +46,10 @@ void main()
     };
     int sizeOfArray = sizeof(orderedArray) / sizeof(orderedArray[0]);
 
-    BinarySearch(orderedArray, sizeOfArray, 58);
+    int result = BinarySearch(orderedArray, sizeOfArray, 58);
+
+    if (result = 0) 
+    {
+        printf("This number cannot be found in the array");
+    }
 }
