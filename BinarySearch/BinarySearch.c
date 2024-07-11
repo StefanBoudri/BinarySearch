@@ -46,9 +46,9 @@ void main()
     };
     int sizeOfArray = sizeof(orderedArray) / sizeof(orderedArray[0]);
 
-    int result = BinarySearch(orderedArray, sizeOfArray, 58);
+    int result = BinarySearch(orderedArray, sizeOfArray, 1000);
 
-    if (result = 0) 
+    if (result == 0) 
     {
         printf("This number cannot be found in the array");
     }
